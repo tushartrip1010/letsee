@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  margin: 0;
+}
+
+.animation-box {
+  width: 75%;
+  height: 27.5rem;
+  background-color: rgb(0, 0, 0);
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.first-text,
+.second-text,
+.third-text,
+.fourth-text,
+.fifth-text {
+  font-size: 3.4rem;
+  position: absolute;
+  opacity: 0;
+  color: white;
+}
+
+.first-text {
+  left: 2.5rem;
+  top: 5rem;
+  animation: topFadeOut 5s forwards;
+}
+
+.second-text {
+  top: 8.5rem;
+  animation: rightFadeInOut 6s 6s forwards, fadeInOut 7s 7s forwards;
+}
+
+.third-text {
+  top: 13rem;
+  animation: rightFadeInOut 9s s5 forwards, fadeInOut 9s 8.5s forwards;
+}
+
+.fourth-text {
+  top: 10.5rem;
+  left: 10%;
+  animation: fadeInOut 12s 12s forwards;
+}
+
+.fifth-text {
+  left: 5%;
+  bottom: 25%;
+  animation: bottomFadeOut 12s 15s forwards;
+}
+
+@keyframes topFadeOut {
+  0% {
+    top: -3rem;
+    opacity: 0;
+  }
+  75% {
+    top: 25%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bottomFadeOut {
+  0% {
+    bottom: -5rem;
+    opacity: 0;
+  }
+  75% {
+    bottom: 25%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rightFadeInOut {
+  0% {
+    right: -3rem;
+    opacity: 0;
+  }
+  75% {
+    right: 10rem;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    right: 10rem;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
